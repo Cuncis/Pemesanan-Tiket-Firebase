@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Pemesanan Tiket Online</string>
+    <string name="username_label">Username</string>
+    <string name="password_label">Password</string>
+    <string name="signin">Sign In</string>
+    <string name="slogan">Wisata Jadi Lebih Asyik!</string>
+    <string name="email_label">Email</string>
+    <string name="name_label">Name</string>
+    <string name="bio_label">Your Passion?</string>
+</resources>
