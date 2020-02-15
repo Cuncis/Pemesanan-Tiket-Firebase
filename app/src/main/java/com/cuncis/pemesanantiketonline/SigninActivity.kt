@@ -11,6 +11,9 @@ class SigninActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
+        btn_sign_in.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
         btn_new_account.setOnClickListener {
             startActivity(Intent(this, RegisterOneActivity::class.java))
         }
