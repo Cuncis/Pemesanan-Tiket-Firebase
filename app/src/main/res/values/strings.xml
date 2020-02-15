@@ -7,4 +7,5 @@
     <string name="email_label">Email</string>
     <string name="name_label">Name</string>
     <string name="bio_label">Your Passion?</string>
+    <string name="explore">Explore Now</string>
 </resources>
