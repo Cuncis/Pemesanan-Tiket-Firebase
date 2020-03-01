@@ -1,10 +1,11 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_success_register.*
 
 class SuccessRegisterActivity : AppCompatActivity() {
@@ -18,9 +19,15 @@ class SuccessRegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success_register)
 
-        appSplash = AnimationUtils.loadAnimation(this, R.anim.app_splash)
-        btt = AnimationUtils.loadAnimation(this, R.anim.btt)
-        ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
+        appSplash = AnimationUtils.loadAnimation(this,
+            R.anim.app_splash
+        )
+        btt = AnimationUtils.loadAnimation(this,
+            R.anim.btt
+        )
+        ttb = AnimationUtils.loadAnimation(this,
+            R.anim.ttb
+        )
 
         btn_explore.startAnimation(btt)
         icon_success.startAnimation(appSplash)

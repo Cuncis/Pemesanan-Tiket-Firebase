@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterTwoActivity">
+    tools:context=".ui.RegisterTwoActivity">
 
     <View
         android:id="@+id/view"
@@ -85,7 +85,7 @@
 
 
             <EditText
-                android:id="@+id/nama_lengkap"
+                android:id="@+id/et_nama_lengkap"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -117,7 +117,7 @@
 
 
             <EditText
-                android:id="@+id/bio"
+                android:id="@+id/et_bio"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"

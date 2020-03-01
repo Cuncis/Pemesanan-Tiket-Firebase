@@ -11,24 +11,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".EditProfileActivity"></activity>
-        <activity android:name=".MyProfileActivity" />
-        <activity android:name=".SuccessBuyTicketActivity" />
-        <activity android:name=".TicketCheckoutActivity" />
-        <activity android:name=".TicketDetailActivity" />
-        <activity android:name=".SuccessRegisterActivity" />
-        <activity android:name=".GetStartedActivity" />
-        <activity android:name=".RegisterTwoActivity" />
-        <activity android:name=".RegisterOneActivity" />
-        <activity android:name=".SigninActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".ui.EditProfileActivity" />
+        <activity android:name=".ui.MyProfileActivity" />
+        <activity android:name=".ui.SuccessBuyTicketActivity" />
+        <activity android:name=".ui.TicketCheckoutActivity" />
+        <activity android:name=".ui.TicketDetailActivity" />
+        <activity android:name=".ui.SuccessRegisterActivity" />
+        <activity android:name=".ui.GetStartedActivity" />
+        <activity android:name=".ui.RegisterTwoActivity" />
+        <activity android:name=".ui.RegisterOneActivity" />
+        <activity android:name=".ui.SigninActivity" />
+        <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".ui.HomeActivity" />
     </application>
 
 </manifest>

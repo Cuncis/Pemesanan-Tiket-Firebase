@@ -1,8 +1,9 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_ticket_detail.*
 
 class TicketDetailActivity : AppCompatActivity() {

@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "959361230625",
-    "firebase_url": "https://tiketsaya-94128.firebaseio.com",
-    "project_id": "tiketsaya-94128",
-    "storage_bucket": "tiketsaya-94128.appspot.com"
+    "project_number": "360120403628",
+    "firebase_url": "https://tiketsaya-57a81.firebaseio.com",
+    "project_id": "tiketsaya-57a81",
+    "storage_bucket": "tiketsaya-57a81.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:959361230625:android:001b74be6dba196ded8060",
+        "mobilesdk_app_id": "1:360120403628:android:60577fcef6614031f80109",
         "android_client_info": {
           "package_name": "com.cuncis.pemesanantiketonline"
         }
       },
       "oauth_client": [
         {
-          "client_id": "959361230625-0jnkj1g5kodjq1fgu8i199hlfh6fq33o.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.cuncis.pemesanantiketonline",
-            "certificate_hash": "ca357666d1a1b50ef8795b22848b219dc87b52a9"
-          }
-        },
-        {
-          "client_id": "959361230625-cor7ik0cg05k5hhs9r7q6al5r7rkqipt.apps.googleusercontent.com",
+          "client_id": "360120403628-eukfra8e8j7hf2ungojbeej7vq51k8m3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCtdymgnhOgCw7ZFeCK5IrakFi6cHfDHeY"
+          "current_key": "AIzaSyASFwsdgey9XJF-OUKx4TnwRxB_HFsHFfo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "959361230625-cor7ik0cg05k5hhs9r7q6al5r7rkqipt.apps.googleusercontent.com",
+              "client_id": "360120403628-eukfra8e8j7hf2ungojbeej7vq51k8m3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -1,7 +1,8 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.cuncis.pemesanantiketonline.R
 
 class EditProfileActivity : AppCompatActivity() {
 

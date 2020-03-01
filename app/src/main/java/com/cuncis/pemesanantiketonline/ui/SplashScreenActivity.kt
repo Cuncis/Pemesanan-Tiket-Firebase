@@ -1,4 +1,4 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -17,8 +18,12 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-        appSplash = AnimationUtils.loadAnimation(this, R.anim.app_splash)
-        btt = AnimationUtils.loadAnimation(this, R.anim.btt)
+        appSplash = AnimationUtils.loadAnimation(this,
+            R.anim.app_splash
+        )
+        btt = AnimationUtils.loadAnimation(this,
+            R.anim.btt
+        )
 
         app_logo.startAnimation(appSplash)
         app_subtitle.startAnimation(btt)

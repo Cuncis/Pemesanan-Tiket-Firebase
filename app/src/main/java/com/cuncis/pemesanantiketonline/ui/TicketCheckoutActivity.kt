@@ -1,10 +1,11 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_ticket_checkout.*
 
 class TicketCheckoutActivity : AppCompatActivity() {

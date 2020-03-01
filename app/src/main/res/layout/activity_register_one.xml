@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgPrimary"
-    tools:context=".RegisterOneActivity">
+    tools:context=".ui.RegisterOneActivity">
 
     <View
         android:id="@+id/view"
@@ -85,7 +85,7 @@
 
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -118,7 +118,7 @@
 
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"
@@ -150,7 +150,7 @@
 
 
             <EditText
-                android:id="@+id/email_address"
+                android:id="@+id/et_email_address"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/bg_input_edit"

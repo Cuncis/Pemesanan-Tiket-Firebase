@@ -1,9 +1,10 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_success_buy_ticket.*
 
 class SuccessBuyTicketActivity : AppCompatActivity() {
@@ -16,9 +17,15 @@ class SuccessBuyTicketActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_success_buy_ticket)
 
-        appSplash = AnimationUtils.loadAnimation(this, R.anim.app_splash)
-        btt = AnimationUtils.loadAnimation(this, R.anim.btt)
-        ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
+        appSplash = AnimationUtils.loadAnimation(this,
+            R.anim.app_splash
+        )
+        btt = AnimationUtils.loadAnimation(this,
+            R.anim.btt
+        )
+        ttb = AnimationUtils.loadAnimation(this,
+            R.anim.ttb
+        )
 
         // run animation
         icon_success_ticket.startAnimation(appSplash)

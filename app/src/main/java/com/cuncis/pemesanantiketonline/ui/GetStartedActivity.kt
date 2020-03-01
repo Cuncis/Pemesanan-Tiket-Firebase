@@ -1,13 +1,12 @@
-package com.cuncis.pemesanantiketonline
+package com.cuncis.pemesanantiketonline.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.cuncis.pemesanantiketonline.R
 import kotlinx.android.synthetic.main.activity_get_started.*
-import kotlinx.android.synthetic.main.activity_get_started.view.*
-import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class GetStartedActivity : AppCompatActivity() {
 
@@ -19,8 +18,12 @@ class GetStartedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_get_started)
 
         // load animation
-        ttb = AnimationUtils.loadAnimation(this, R.anim.ttb)
-        btt = AnimationUtils.loadAnimation(this, R.anim.btt)
+        ttb = AnimationUtils.loadAnimation(this,
+            R.anim.ttb
+        )
+        btt = AnimationUtils.loadAnimation(this,
+            R.anim.btt
+        )
 
         emblem_app.startAnimation(ttb)
         intro_app.startAnimation(ttb)
@@ -34,6 +37,7 @@ class GetStartedActivity : AppCompatActivity() {
 
         btn_new_account_create.setOnClickListener {
             startActivity(Intent(this, RegisterOneActivity::class.java))
+//            startActivity(Intent(this, RegisterTwoActivity::class.java))
         }
     }
 }
