@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/photo_home_user"
+                    android:id="@+id/img_photo_home_user"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/icon_nopic" />
@@ -78,31 +78,33 @@
 
 
             <TextView
-                android:id="@+id/nama_lengkap"
+                android:id="@+id/tv_nama_lengkap"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="28dp"
                 android:fontFamily="@font/mmedium"
                 android:textColor="#FFF"
+                tools:text="Cuncis"
                 android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@+id/view2"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
             <TextView
-                android:id="@+id/bio"
+                android:id="@+id/tv_bio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mlight"
                 android:textColor="#FFF"
+                tools:text="Traveller"
                 android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/view2"
-                app:layout_constraintTop_toBottomOf="@+id/nama_lengkap" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_nama_lengkap" />
 
             <TextView
-                android:id="@+id/user_balance"
+                android:id="@+id/tv_user_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
@@ -110,6 +112,7 @@
                 android:fontFamily="@font/mmedium"
                 android:textColor="@color/greenPrimary"
                 android:textSize="24sp"
+                tools:text="$ 800"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

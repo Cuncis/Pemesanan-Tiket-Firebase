@@ -25,7 +25,6 @@ class SigninActivity : AppCompatActivity() {
 
             database.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    showLog("Username: ${dataSnapshot.child("username").value.toString()}")
                     if (dataSnapshot.child("username").value.toString() == et_username.text.toString()) {
                         val password = dataSnapshot.child("password").value.toString()
 
@@ -41,7 +40,7 @@ class SigninActivity : AppCompatActivity() {
                     }
                 }
                 override fun onCancelled(p0: DatabaseError) {
-                    Utils.showLog("" + p0.message)
+                    showLog("" + p0.message)
                 }
             })
         }

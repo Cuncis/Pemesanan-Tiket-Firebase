@@ -35,6 +35,9 @@ class RegisterTwoActivity : AppCompatActivity() {
         }
 
         btn_continue.setOnClickListener {
+            btn_continue.isEnabled = false
+            btn_continue.text = "Loading..."
+
             database = FirebaseDatabase.getInstance().reference.child("Users")
                 .child(PrefsManager.getUsername(this).toString())
             storage = FirebaseStorage.getInstance().reference.child("Photousers")

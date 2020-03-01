@@ -19,6 +19,9 @@ class RegisterOneActivity : AppCompatActivity() {
 
         showLog(PrefsManager.getUsername(this).toString())
         btn_continue.setOnClickListener {
+            btn_continue.isEnabled = false
+            btn_continue.text = "Loading..."
+
             PrefsManager.setUsername(this, et_username.text.toString())
             database = FirebaseDatabase.getInstance().reference
                 .child("Users")
