@@ -20,29 +20,53 @@ class SigninActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signin)
 
         btn_sign_in.setOnClickListener {
-            database = FirebaseDatabase.getInstance().reference
-                .child("Users").child(et_username.text.toString())
 
-            database.addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    if (dataSnapshot.child("username").value.toString() == et_username.text.toString()) {
-                        val password = dataSnapshot.child("password").value.toString()
+            btn_sign_in.isEnabled = false
+            btn_sign_in.text = "LOADING..."
 
-                        if (et_password.text.toString() == password) {
-                            PrefsManager.setUsername(this@SigninActivity, et_username.text.toString().trim())
+            if (et_username.text.toString().isEmpty() && et_password.text.toString().isEmpty()) {
+                showToast(applicationContext, "Username and Password can't be empty!")
+                btn_sign_in.isEnabled = true
+                btn_sign_in.text = "SIGN IN"
+            } else if (et_username.text.toString().isEmpty()) {
+                showToast(applicationContext, "Username can't be empty!")
+                btn_sign_in.isEnabled = true
+                btn_sign_in.text = "SIGN IN"
+            } else if (et_password.text.toString().isEmpty()) {
+                showToast(applicationContext, "Password can't be empty!")
+                btn_sign_in.isEnabled = true
+                btn_sign_in.text = "SIGN IN"
+            } else {
+                database = FirebaseDatabase.getInstance().reference
+                    .child("Users").child(et_username.text.toString())
 
-                            startActivity(Intent(this@SigninActivity, HomeActivity::class.java))
+                database.addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        if (dataSnapshot.child("username").value.toString() == et_username.text.toString()) {
+                            val password = dataSnapshot.child("password").value.toString()
+
+                            if (et_password.text.toString() == password) {
+                                PrefsManager.setUsername(this@SigninActivity, et_username.text.toString().trim())
+
+                                startActivity(Intent(this@SigninActivity, HomeActivity::class.java))
+                            } else {
+                                showToast(applicationContext, "Password Incorrect!")
+                                btn_sign_in.isEnabled = true
+                                btn_sign_in.text = "SIGN IN"
+                            }
                         } else {
-                            showToast(applicationContext, "Password Incorrect!")
+                            showToast(applicationContext, "Username Not Found!")
+                            btn_sign_in.isEnabled = true
+                            btn_sign_in.text = "SIGN IN"
                         }
-                    } else {
-                        showToast(applicationContext, "Username Not Found!")
                     }
-                }
-                override fun onCancelled(p0: DatabaseError) {
-                    showLog("" + p0.message)
-                }
-            })
+                    override fun onCancelled(p0: DatabaseError) {
+                        showLog("" + p0.message)
+                        btn_sign_in.isEnabled = true
+                        btn_sign_in.text = "SIGN IN"
+                    }
+                })
+            }
         }
         btn_new_account.setOnClickListener {
             startActivity(Intent(this, RegisterOneActivity::class.java))

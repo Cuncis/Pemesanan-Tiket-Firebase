@@ -1,5 +1,6 @@
 package com.cuncis.pemesanantiketonline.ui
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
@@ -35,5 +36,13 @@ class SuccessBuyTicketActivity : AppCompatActivity() {
 
         btn_view_ticket.startAnimation(btt)
         btn_my_dashboard.startAnimation(btt)
+
+        btn_view_ticket.setOnClickListener {
+            startActivity(Intent(this, MyProfileActivity::class.java))
+        }
+
+        btn_my_dashboard.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+        }
     }
 }

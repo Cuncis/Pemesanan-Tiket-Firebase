@@ -23,6 +23,7 @@ class TicketCheckoutActivity : AppCompatActivity() {
     private var myBalance: Int = 0
     private var valueTotalHarga: Int = 0
     private var valueHargaTiket: Int = 0
+    private var restOfBalance: Int = 0
 
     private var dateWisata = ""
     private var timeWisata = ""
@@ -112,6 +113,7 @@ class TicketCheckoutActivity : AppCompatActivity() {
                 .child(PrefsManager.getUsername(this).toString()).child(tv_nama_wisata.text.toString() + numberOfTransaction)
             databaseMyTikets.addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
+                    databaseMyTikets.ref.child("id_ticket").setValue(tv_nama_wisata.text.toString() + numberOfTransaction)
                     databaseMyTikets.ref.child("nama_wisata").setValue(tv_nama_wisata.text.toString())
                     databaseMyTikets.ref.child("lokasi").setValue(tv_lokasi.text.toString())
                     databaseMyTikets.ref.child("ketentuan").setValue(tv_ketentuan.text.toString())
@@ -123,6 +125,17 @@ class TicketCheckoutActivity : AppCompatActivity() {
                 }
                 override fun onCancelled(p0: DatabaseError) {
                     Utils.showLog("MyTikets Error: " + p0.message)
+                }
+            })
+
+            databaseUsers.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(p0: DataSnapshot) {
+                    restOfBalance = myBalance - valueTotalHarga
+                    databaseUsers.ref.child("user_balance").setValue(restOfBalance)
+                    Utils.showLog("User Balance Rest of Balance: $restOfBalance")
+                }
+                override fun onCancelled(p0: DatabaseError) {
+                    Utils.showLog("User Balance Error: " + p0.message)
                 }
             })
         }
