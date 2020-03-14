@@ -42,7 +42,9 @@ class TicketDetailActivity : AppCompatActivity() {
         })
 
         btn_buy_ticket.setOnClickListener {
-            startActivity(Intent(this, TicketCheckoutActivity::class.java))
+            val intent = Intent(this, TicketCheckoutActivity::class.java)
+            intent.putExtra(KEY_TICKET, newTicket)
+            startActivity(intent)
         }
 
         btn_back.setOnClickListener {
