@@ -69,7 +69,19 @@ class MyProfileActivity : AppCompatActivity(), MyProfileAdapter.ClickListener {
             startActivity(intent)
             finish()
         }
+
+        btn_edit_profile.setOnClickListener {
+            startActivity(Intent(this, EditProfileActivity::class.java))
+        }
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, HomeActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
+        finish()
+    }
+
 
     override fun onTicketClick(position: Int) {
         val intent = Intent(this, MyTicketDetailActivity::class.java)
