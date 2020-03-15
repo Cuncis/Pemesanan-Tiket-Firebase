@@ -5,4 +5,5 @@ object Constants {
     const val PREF_NAME = "com.cuncis.pemesanantiketonline.tiketsaya"
 
     const val KEY_TICKET = "jenis_tiket"
+    const val KEY_WISATA = "nama_wisata"
 }

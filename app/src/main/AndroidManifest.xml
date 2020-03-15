@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.MyTicketDetailActivity"></activity>
         <activity android:name=".ui.EditProfileActivity" />
         <activity android:name=".ui.MyProfileActivity" />
         <activity android:name=".ui.SuccessBuyTicketActivity" />
