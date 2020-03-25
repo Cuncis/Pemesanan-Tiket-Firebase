@@ -11,17 +11,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.MyTicketDetailActivity"></activity>
+        <activity android:name=".ui.MyTicketDetailActivity" />
         <activity android:name=".ui.EditProfileActivity" />
-        <activity android:name=".ui.MyProfileActivity" />
+        <activity android:name=".ui.MyProfileActivity"
+            android:launchMode="singleTask"/>
         <activity android:name=".ui.SuccessBuyTicketActivity" />
         <activity android:name=".ui.TicketCheckoutActivity" />
         <activity android:name=".ui.TicketDetailActivity" />
-        <activity android:name=".ui.SuccessRegisterActivity" />
-        <activity android:name=".ui.GetStartedActivity" />
-        <activity android:name=".ui.RegisterTwoActivity" />
-        <activity android:name=".ui.RegisterOneActivity" />
-        <activity android:name=".ui.SigninActivity" />
+        <activity android:name=".ui.SuccessRegisterActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.GetStartedActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.RegisterTwoActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.RegisterOneActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.SigninActivity"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.HomeActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".ui.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.HomeActivity" />
     </application>
 
 </manifest>

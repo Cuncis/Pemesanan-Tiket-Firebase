@@ -48,7 +48,10 @@ class SigninActivity : AppCompatActivity() {
                             if (et_password.text.toString() == password) {
                                 PrefsManager.setUsername(this@SigninActivity, et_username.text.toString().trim())
 
-                                startActivity(Intent(this@SigninActivity, HomeActivity::class.java))
+                                val intent = Intent(this@SigninActivity, HomeActivity::class.java)
+                                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+                                startActivity(intent)
+                                finish()
                             } else {
                                 showToast(applicationContext, "Password Incorrect!")
                                 btn_sign_in.isEnabled = true

@@ -37,7 +37,6 @@ class GetStartedActivity : AppCompatActivity() {
 
         btn_new_account_create.setOnClickListener {
             startActivity(Intent(this, RegisterOneActivity::class.java))
-//            startActivity(Intent(this, RegisterTwoActivity::class.java))
         }
     }
 }

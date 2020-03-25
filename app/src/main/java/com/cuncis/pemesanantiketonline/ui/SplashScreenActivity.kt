@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import com.cuncis.pemesanantiketonline.R
+import com.cuncis.pemesanantiketonline.data.PrefsManager
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
 class SplashScreenActivity : AppCompatActivity() {
@@ -28,9 +29,16 @@ class SplashScreenActivity : AppCompatActivity() {
         app_logo.startAnimation(appSplash)
         app_subtitle.startAnimation(btt)
 
-        Handler().postDelayed({
-            startActivity(Intent(this, GetStartedActivity::class.java))
-            finish()
-        }, 2000)
+        if (PrefsManager.getUsername(this).toString().isEmpty()) {
+            Handler().postDelayed({
+                startActivity(Intent(this, GetStartedActivity::class.java))
+                finish()
+            }, 2000)
+        } else {
+            Handler().postDelayed({
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }, 2000)
+        }
     }
 }

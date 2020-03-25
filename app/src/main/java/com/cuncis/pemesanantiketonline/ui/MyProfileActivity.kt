@@ -65,7 +65,7 @@ class MyProfileActivity : AppCompatActivity(), MyProfileAdapter.ClickListener {
 
         btn_back_home.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
             startActivity(intent)
             finish()
         }
@@ -73,11 +73,20 @@ class MyProfileActivity : AppCompatActivity(), MyProfileAdapter.ClickListener {
         btn_edit_profile.setOnClickListener {
             startActivity(Intent(this, EditProfileActivity::class.java))
         }
+
+        btn_sign_out.setOnClickListener {
+            PrefsManager.clearUser(this)
+
+            val intent = Intent(this, GetStartedActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
+            startActivity(intent)
+            finish()
+        }
     }
 
     override fun onBackPressed() {
         val intent = Intent(this, HomeActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
         finish()
     }
